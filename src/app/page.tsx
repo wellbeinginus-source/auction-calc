@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CoupangBanner, BookRecommendations } from "@/components/CoupangBanner";
 
 export const metadata: Metadata = {
   title: "경매 계산기 | 부동산 경매 수익률·취득세·대출이자 무료 계산",
@@ -65,8 +66,12 @@ export default function Home() {
         ))}
       </div>
 
+      <CoupangBanner />
+
+      <BookRecommendations />
+
       {/* AdSense 광고 영역 */}
-      <div className="mt-12 text-center">
+      <div className="mt-8 text-center">
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}

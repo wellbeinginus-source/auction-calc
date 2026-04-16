@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import CalcInput from "@/components/CalcInput";
 import ResultRow from "@/components/ResultRow";
 import AdBanner from "@/components/AdBanner";
+import { CoupangBanner } from "@/components/CoupangBanner";
 
 type PropertyType = "house_under6" | "house_6to9" | "house_over9" | "house_multi" | "commercial" | "land";
 
@@ -173,6 +174,7 @@ export default function AcquisitionTaxPage() {
       </div>
 
       <AdBanner />
+      <CoupangBanner />
 
       <section className="mt-12">
         <h2 className="text-xl font-bold mb-4">취득세 FAQ</h2>

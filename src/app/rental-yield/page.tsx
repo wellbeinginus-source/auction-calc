@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import CalcInput from "@/components/CalcInput";
 import ResultRow from "@/components/ResultRow";
 import AdBanner from "@/components/AdBanner";
+import { CoupangBanner } from "@/components/CoupangBanner";
 
 function fmt(n: number): string {
   if (!isFinite(n)) return "-";
@@ -188,6 +189,7 @@ export default function RentalYieldPage() {
       </div>
 
       <AdBanner />
+      <CoupangBanner />
 
       <section className="mt-12">
         <h2 className="text-xl font-bold mb-4">임대수익률 FAQ</h2>

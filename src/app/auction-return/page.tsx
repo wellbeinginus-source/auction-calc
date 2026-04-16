@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import CalcInput from "@/components/CalcInput";
 import ResultRow from "@/components/ResultRow";
 import AdBanner from "@/components/AdBanner";
+import { CoupangBanner, BookRecommendations } from "@/components/CoupangBanner";
 
 function fmt(n: number): string {
   if (!isFinite(n)) return "-";
@@ -152,6 +153,8 @@ export default function AuctionReturnPage() {
       </div>
 
       <AdBanner />
+      <CoupangBanner />
+      <BookRecommendations />
 
       {/* SEO FAQ */}
       <section className="mt-12">

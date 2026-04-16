@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import CalcInput from "@/components/CalcInput";
 import ResultRow from "@/components/ResultRow";
 import AdBanner from "@/components/AdBanner";
+import { CoupangBanner, LoanCompareCTA } from "@/components/CoupangBanner";
 
 type RepayType = "equal_payment" | "equal_principal" | "bullet";
 
@@ -203,6 +204,8 @@ export default function LoanInterestPage() {
       </div>
 
       <AdBanner />
+      <LoanCompareCTA />
+      <CoupangBanner />
 
       <section className="mt-12">
         <h2 className="text-xl font-bold mb-4">대출이자 FAQ</h2>
