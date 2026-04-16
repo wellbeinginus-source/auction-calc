@@ -78,6 +78,11 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
           crossOrigin="anonymous"
         />
+        {/* 카카오 애드핏 - 승인 후 DAN-XXXXXXXXXX를 실제 광고단위 ID로 교체 */}
+        <script
+          async
+          src="//t1.daumcdn.net/kas/static/ba.min.js"
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <header className="border-b border-card-border bg-card-bg sticky top-0 z-50">
