@@ -204,6 +204,8 @@ export default function LoanInterestPage() {
         </div>
       </div>
 
+      <LeadCTA />
+
       <AdBanner />
       <KakaoAdFit width={320} height={100} />
       <LoanCompareCTA />

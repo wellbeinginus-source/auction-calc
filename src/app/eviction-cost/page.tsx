@@ -7,6 +7,7 @@ import ResultRow from "@/components/ResultRow";
 import AdBanner from "@/components/AdBanner";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner, BookRecommendations } from "@/components/CoupangBanner";
+import LeadCTA from "@/components/LeadCTA";
 
 function fmt(n: number): string {
   if (!isFinite(n) || n === 0) return "-";
@@ -126,6 +127,8 @@ export default function EvictionCostPage() {
           </div>
         </div>
       </div>
+
+      <LeadCTA />
 
       <AdBanner />
       <KakaoAdFit width={320} height={100} />
