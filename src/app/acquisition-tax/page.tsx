@@ -7,19 +7,20 @@ import AdBanner from "@/components/AdBanner";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner } from "@/components/CoupangBanner";
 
-type PropertyType = "house_under6" | "house_6to9" | "house_over9" | "house_multi" | "commercial" | "land";
+type PropertyType = "house_under6" | "house_6to9" | "house_over9" | "house_multi2" | "house_multi3" | "commercial" | "land";
 
 const PROPERTY_OPTIONS: { value: PropertyType; label: string; desc: string }[] = [
   { value: "house_under6", label: "주택 (6억 이하)", desc: "1주택 기준, 취득세 1%" },
   { value: "house_6to9", label: "주택 (6억~9억)", desc: "1주택 기준, 취득세 1~3%" },
   { value: "house_over9", label: "주택 (9억 초과)", desc: "1주택 기준, 취득세 3%" },
-  { value: "house_multi", label: "다주택 (2주택 이상)", desc: "조정지역 여부에 따라 8~12%" },
+  { value: "house_multi2", label: "2주택 (조정지역)", desc: "취득세 8%" },
+  { value: "house_multi3", label: "3주택 이상 (조정지역)", desc: "취득세 12%" },
   { value: "commercial", label: "상가·오피스텔", desc: "취득세 4%" },
   { value: "land", label: "토지", desc: "취득세 4%" },
 ];
 
 function getRate(type: PropertyType, price: number): { acqRate: number; localEduRate: number; ruralRate: number } {
-  const localEduRate = 0.1; // 지방교육세: 취득세의 10%
+  const localEduRate = 0.1;
   let acqRate: number;
   let ruralRate: number;
 
@@ -29,9 +30,7 @@ function getRate(type: PropertyType, price: number): { acqRate: number; localEdu
       ruralRate = 0;
       break;
     case "house_6to9": {
-      // 6억~9억 구간: 1% ~ 3% 점진 적용
-      const priceInOk = price; // 만원 단위
-      const ratio = Math.min(Math.max((priceInOk - 60000) / 30000, 0), 1);
+      const ratio = Math.min(Math.max((price - 60000) / 30000, 0), 1);
       acqRate = 1 + ratio * 2;
       ruralRate = 0;
       break;
@@ -40,9 +39,13 @@ function getRate(type: PropertyType, price: number): { acqRate: number; localEdu
       acqRate = 3;
       ruralRate = 0.2;
       break;
-    case "house_multi":
+    case "house_multi2":
       acqRate = 8;
       ruralRate = 0.6;
+      break;
+    case "house_multi3":
+      acqRate = 12;
+      ruralRate = 1.0;
       break;
     case "commercial":
     case "land":
