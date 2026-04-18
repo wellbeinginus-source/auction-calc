@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://auction-calc.vercel.app"),
   title: {
     default: "경매 계산기 | 부동산 경매 수익률·취득세·대출이자 계산",
     template: "%s | 경매 계산기",
@@ -28,6 +29,8 @@ export const metadata: Metadata = {
     "대출이자 계산기",
     "임대수익률",
     "경매 투자",
+    "부동산 경매 계산기",
+    "낙찰가 계산",
   ],
   openGraph: {
     title: "경매 계산기 | 부동산 경매 수익률·취득세·대출이자 계산",
@@ -35,6 +38,8 @@ export const metadata: Metadata = {
       "부동산 경매 투자자를 위한 무료 계산기. 수익률, 취득세, 대출이자, 임대수익률을 한 곳에서.",
     type: "website",
     locale: "ko_KR",
+    url: "https://auction-calc.vercel.app",
+    siteName: "경매 계산기",
   },
   robots: { index: true, follow: true },
 };
