@@ -148,6 +148,13 @@ export default function AuctionReturnPage() {
               <p className="font-medium mb-1">계산 공식</p>
               <p>수익률 = (매도가 - 낙찰가 - 제비용) ÷ (낙찰가 + 제비용) × 100</p>
             </div>
+
+            <button
+              onClick={() => window.print()}
+              className="mt-4 w-full py-2.5 px-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-colors print:hidden"
+            >
+              결과 저장 (PDF)
+            </button>
           </div>
         </div>
       </div>

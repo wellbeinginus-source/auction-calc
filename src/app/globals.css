@@ -42,3 +42,9 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+@media print {
+  header, footer, nav, .print\:hidden { display: none !important; }
+  body { background: white; }
+  .sticky { position: static; }
+}
