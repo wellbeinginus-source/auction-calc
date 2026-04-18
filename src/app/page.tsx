@@ -33,6 +33,12 @@ const CALCULATORS = [
     title: "임대수익률 계산기",
     desc: "낙찰가 대비 월세·전세 수익률과 연간 순수익을 계산해요.",
   },
+  {
+    href: "/eviction-cost",
+    icon: "🚪",
+    title: "명도비용 계산기",
+    desc: "이사비·합의금·법원 집행비용까지, 명도에 드는 총 비용을 미리 계산해요.",
+  },
 ];
 
 export default function Home() {

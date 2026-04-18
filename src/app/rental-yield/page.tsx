@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import CalcInput from "@/components/CalcInput";
 import ResultRow from "@/components/ResultRow";
 import AdBanner from "@/components/AdBanner";
+import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner } from "@/components/CoupangBanner";
 
 function fmt(n: number): string {
@@ -189,6 +190,7 @@ export default function RentalYieldPage() {
       </div>
 
       <AdBanner />
+      <KakaoAdFit width={320} height={100} />
       <CoupangBanner />
 
       <section className="mt-12">

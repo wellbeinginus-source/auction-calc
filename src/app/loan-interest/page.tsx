@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import CalcInput from "@/components/CalcInput";
 import ResultRow from "@/components/ResultRow";
 import AdBanner from "@/components/AdBanner";
+import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner, LoanCompareCTA } from "@/components/CoupangBanner";
 
 type RepayType = "equal_payment" | "equal_principal" | "bullet";
@@ -204,6 +205,7 @@ export default function LoanInterestPage() {
       </div>
 
       <AdBanner />
+      <KakaoAdFit width={320} height={100} />
       <LoanCompareCTA />
       <CoupangBanner />
 
