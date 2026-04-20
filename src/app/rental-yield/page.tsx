@@ -194,7 +194,7 @@ export default function RentalYieldPage() {
       <KakaoAdFit />
       <AdBanner />
       <KakaoAdFit width={320} height={100} />
-      <CoupangBanner />
+      <CoupangBanner variant="rental-yield" />
 
       <section className="mt-12">
         <h2 className="text-xl font-bold mb-4">임대수익률 FAQ</h2>

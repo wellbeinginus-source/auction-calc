@@ -189,7 +189,7 @@ export default function AcquisitionTaxPage() {
       <KakaoAdFit />
       <AdBanner />
       <KakaoAdFit width={320} height={100} />
-      <CoupangBanner />
+      <CoupangBanner variant="acquisition-tax" />
 
       <section className="mt-12">
         <h2 className="text-xl font-bold mb-4">취득세 FAQ</h2>

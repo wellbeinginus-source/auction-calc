@@ -210,7 +210,7 @@ export default function LoanInterestPage() {
       <AdBanner />
       <KakaoAdFit width={320} height={100} />
       <LoanCompareCTA />
-      <CoupangBanner />
+      <CoupangBanner variant="loan-interest" />
 
       <section className="mt-12">
         <h2 className="text-xl font-bold mb-4">대출이자 FAQ</h2>

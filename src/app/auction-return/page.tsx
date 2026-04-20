@@ -165,8 +165,8 @@ export default function AuctionReturnPage() {
       <KakaoAdFit />
       <AdBanner />
       <KakaoAdFit width={320} height={100} />
-      <CoupangBanner />
-      <BookRecommendations />
+      <CoupangBanner variant="auction-return" />
+      <BookRecommendations variant="auction-return" />
 
       {/* SEO FAQ */}
       <section className="mt-12">

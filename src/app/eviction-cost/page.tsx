@@ -132,8 +132,8 @@ export default function EvictionCostPage() {
 
       <AdBanner />
       <KakaoAdFit width={320} height={100} />
-      <CoupangBanner />
-      <BookRecommendations />
+      <CoupangBanner variant="eviction-cost" />
+      <BookRecommendations variant="eviction-cost" />
 
       <section className="mt-12">
         <h2 className="text-xl font-bold mb-4">명도비용 FAQ</h2>
