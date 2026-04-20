@@ -7,7 +7,7 @@ import AdBanner from "@/components/AdBanner";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner } from "@/components/CoupangBanner";
 
-type PropertyType = "house_under6" | "house_6to9" | "house_over9" | "house_multi2" | "house_multi3" | "commercial" | "land";
+type PropertyType = "house_under6" | "house_6to9" | "house_over9" | "house_multi2" | "house_multi3" | "commercial" | "land" | "corp_house" | "corp_commercial";
 
 const PROPERTY_OPTIONS: { value: PropertyType; label: string; desc: string }[] = [
   { value: "house_under6", label: "주택 (6억 이하)", desc: "1주택 기준, 취득세 1%" },
@@ -17,6 +17,8 @@ const PROPERTY_OPTIONS: { value: PropertyType; label: string; desc: string }[] =
   { value: "house_multi3", label: "3주택 이상 (조정지역)", desc: "취득세 12%" },
   { value: "commercial", label: "상가·오피스텔", desc: "취득세 4%" },
   { value: "land", label: "토지", desc: "취득세 4%" },
+  { value: "corp_house", label: "법인 — 주택", desc: "취득세 12% (중과)" },
+  { value: "corp_commercial", label: "법인 — 상가·토지", desc: "취득세 4%" },
 ];
 
 function getRate(type: PropertyType, price: number): { acqRate: number; localEduRate: number; ruralRate: number } {
@@ -49,8 +51,13 @@ function getRate(type: PropertyType, price: number): { acqRate: number; localEdu
       break;
     case "commercial":
     case "land":
+    case "corp_commercial":
       acqRate = 4;
       ruralRate = 0.2;
+      break;
+    case "corp_house":
+      acqRate = 12;
+      ruralRate = 1;
       break;
     default:
       acqRate = 1;
@@ -178,7 +185,7 @@ export default function AcquisitionTaxPage() {
       </div>
 
       <LeadCTA />
-
+      <KakaoAdFit />
       <AdBanner />
       <KakaoAdFit width={320} height={100} />
       <CoupangBanner />

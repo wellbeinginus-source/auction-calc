@@ -62,6 +62,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta name="naver-site-verification" content="a538c6f23145ccab416159935e931e183d3e1cb1" />
         {/* Google Analytics */}
         <script
           async
@@ -77,13 +78,13 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* AdSense - 승인 후 ca-pub-XXXXXXXXXX를 실제 ID로 교체 */}
+        {/* AdSense */}
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3913442122539155"
           crossOrigin="anonymous"
         />
-        {/* 카카오 애드핏 - 승인 후 DAN-XXXXXXXXXX를 실제 광고단위 ID로 교체 */}
+        {/* 카카오 애드핏 */}
         <script
           async
           src="//t1.daumcdn.net/kas/static/ba.min.js"
@@ -119,9 +120,15 @@ export default function RootLayout({
               본 계산기는 참고용이며, 실제 투자 결정 시 전문가 상담을
               권장합니다.
             </p>
+            <div className="mt-3 flex justify-center gap-4">
+              <a href="https://tax-calc-five.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">부동산 세금 계산기</a>
+              <a href="https://unsehanip.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">운세한입</a>
+            </div>
+            <p className="mt-2">
+              운영: 온기획(ON) | 이메일: js4yj@naver.com
+            </p>
             <p className="mt-1">
-              &copy; {new Date().getFullYear()} 경매 계산기. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} 경매 계산기. All rights reserved.
             </p>
           </div>
         </footer>

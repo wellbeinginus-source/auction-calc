@@ -162,7 +162,7 @@ export default function AuctionReturnPage() {
       </div>
 
       <LeadCTA />
-
+      <KakaoAdFit />
       <AdBanner />
       <KakaoAdFit width={320} height={100} />
       <CoupangBanner />

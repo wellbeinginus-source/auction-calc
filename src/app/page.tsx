@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CoupangBanner, BookRecommendations } from "@/components/CoupangBanner";
+import KakaoAdFit from "@/components/KakaoAdFit";
 
 export const metadata: Metadata = {
   title: "경매 계산기 | 부동산 경매 수익률·취득세·대출이자 무료 계산",
@@ -69,17 +70,43 @@ export default function Home() {
         ))}
       </div>
 
+      {/* 경매 가이드 */}
+      <section className="mt-12">
+        <h2 className="text-xl font-bold mb-4">경매 투자 가이드</h2>
+        <div className="grid sm:grid-cols-2 gap-3">
+          {[
+            { href: "/guide/auction-return", title: "경매 수익률 계산하는 법", tag: "수익률" },
+            { href: "/guide/acquisition-tax", title: "경매 취득세 계산 가이드", tag: "취득세" },
+            { href: "/guide/loan-interest", title: "대출이자 상환 방식 비교", tag: "대출" },
+            { href: "/guide/rental-yield", title: "임대수익률 계산 가이드", tag: "임대" },
+          ].map((g) => (
+            <Link
+              key={g.href}
+              href={g.href}
+              className="flex items-center gap-3 p-4 rounded-xl border border-card-border bg-card-bg hover:border-primary transition-colors"
+            >
+              <span className="text-xs font-medium px-2 py-1 rounded-full bg-primary/10 text-primary whitespace-nowrap">
+                {g.tag}
+              </span>
+              <span className="text-sm font-medium">{g.title}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <CoupangBanner />
 
       <BookRecommendations />
+
+      <KakaoAdFit width={728} height={90} />
 
       {/* AdSense 광고 영역 */}
       <div className="mt-8 text-center">
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}
-          data-ad-client="ca-pub-XXXXXXXXXX"
-          data-ad-slot="XXXXXXXXXX"
+          data-ad-client="ca-pub-3913442122539155"
+          data-ad-slot=""
           data-ad-format="auto"
           data-full-width-responsive="true"
         />

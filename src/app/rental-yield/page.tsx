@@ -190,7 +190,7 @@ export default function RentalYieldPage() {
       </div>
 
       <LeadCTA />
-
+      <KakaoAdFit />
       <AdBanner />
       <KakaoAdFit width={320} height={100} />
       <CoupangBanner />
