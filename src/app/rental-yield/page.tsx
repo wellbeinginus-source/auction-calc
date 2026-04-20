@@ -6,6 +6,7 @@ import ResultRow from "@/components/ResultRow";
 import AdBanner from "@/components/AdBanner";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner } from "@/components/CoupangBanner";
+import LeadCTA from "@/components/LeadCTA";
 
 function fmt(n: number): string {
   if (!isFinite(n)) return "-";

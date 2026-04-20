@@ -6,6 +6,7 @@ import ResultRow from "@/components/ResultRow";
 import AdBanner from "@/components/AdBanner";
 import KakaoAdFit from "@/components/KakaoAdFit";
 import { CoupangBanner } from "@/components/CoupangBanner";
+import LeadCTA from "@/components/LeadCTA";
 
 type PropertyType = "house_under6" | "house_6to9" | "house_over9" | "house_multi2" | "house_multi3" | "commercial" | "land" | "corp_house" | "corp_commercial";
 
