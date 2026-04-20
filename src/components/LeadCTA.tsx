@@ -13,7 +13,7 @@ export default function LeadCTA() {
           법무사 무료 상담 신청
         </a>
         <a
-          href="https://forms.kakao.com/placeholder-loan"
+          href="https://newtip.net/click.php?m=allcredit&a=A100704118&l=9999&l_cd1=3&l_cd2=0&tu=https%3A%2F%2Fwww.allcredit.co.kr%2Fp%2Fhtml%2Finstall.html%3FreturnUrl%3D"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 text-center py-2.5 px-4 rounded-lg border border-primary text-primary text-sm font-semibold hover:bg-primary/10 transition-colors"
