@@ -100,18 +100,6 @@ export default function Home() {
 
       <KakaoAdFit width={728} height={90} />
 
-      {/* AdSense 광고 영역 */}
-      <div className="mt-8 text-center">
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block" }}
-          data-ad-client="ca-pub-3913442122539155"
-          data-ad-slot=""
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
-      </div>
-
       {/* FAQ - SEO용 */}
       <section className="mt-16">
         <h2 className="text-xl font-bold mb-6">자주 묻는 질문</h2>
