@@ -124,7 +124,7 @@ export default function RootLayout({
               <a href="https://tax-calc-five.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">부동산 세금 계산기</a>
             </div>
             <p className="mt-2">
-              운영: 온기획(ON) | 이메일: js4yj@naver.com
+              운영: 온기획(ON) | 이메일: yj6z0907@gmail.com
             </p>
             <p className="mt-1">
               &copy; {new Date().getFullYear()} 경매 계산기. All rights reserved.
