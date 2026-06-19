@@ -62,6 +62,21 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              name: "경매 계산기",
+              url: "https://auction-calc.vercel.app",
+              applicationCategory: "FinanceApplication",
+              inLanguage: "ko-KR",
+              description: "부동산 경매 수익률·취득세·대출이자 계산",
+              offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+            }),
+          }}
+        />
         <meta name="naver-site-verification" content="a538c6f23145ccab416159935e931e183d3e1cb1" />
         {/* Google Analytics */}
         <script
